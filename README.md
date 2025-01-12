@@ -1,3 +1,3 @@
 # jtgm-core-sys
 
-## Janella is here
+## Ruth is here
