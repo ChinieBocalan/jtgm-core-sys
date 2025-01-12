@@ -1,3 +1,3 @@
 # jtgm-core-sys
 
-#christian macahilig.
+#christian john a. macahilig.
