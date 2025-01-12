@@ -4,17 +4,16 @@
 
 ### CA is here.
 
-### Ruthie is here
-
-
+### Ruth is here
 
 ### yesh yesh 
 
-# Rosh is here
+### Rosh is here
 
-# christian john a. macahilig
-# Praisee the Great eyyy
+### Christian John a. Macahilig
 
-#christian john a. macahilig
+### Praisee the Great eyyy
 
-### Laarni here
+### Christian John a. Macahilig
+
+### Laarni Lalic
