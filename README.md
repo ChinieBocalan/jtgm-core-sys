@@ -1,13 +1,7 @@
-# jtgm-core-sys
+# JTGM Core System
 
-### yeshua is here
+### This system contains the core process of the church such as:
 
-### CA is here.
-
-### Ruthie is here
-
-
-
-### yesh yesh 
-
-### CA is here. hg
+- Attendance
+- MGroup Monitoring
+- Etc.
