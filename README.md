@@ -1,19 +1,7 @@
-# jtgm-core-sys
+# JTGM Core System
 
-### yeshua is here
+### This system contains the core process of the church such as:
 
-### CA is here.
-
-### Ruth is here
-
-### yesh yesh 
-
-### Rosh is here
-
-### Christian John a. Macahilig
-
-### Praisee the Great eyyy
-
-### Christian John a. Macahilig
-
-### Laarni Lalic
+- Attendance
+- MGroup Monitoring
+- Etc.
