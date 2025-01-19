@@ -19,17 +19,6 @@ public class HealthCheckRepositoryImpl implements HealthCheckRepository {
 
     final private HealthCheckJpa healthCheckJpa;
 
-    @Override
-    public HealtchCheckEntity getHealthCheckDetails() {
-        try {
-            log.info("[INFO] Retrieving details from database");
-            HealtchCheckEntity healtchCheckEntity = healthCheckJpa.findByIsActive(1).get();
-            log.info("[INFO] Retrieving details from database");
-            return healtchCheckEntity;
-        }catch (Exception e){
-            throw new GenericRepositoryErrorException("[ERROR] Failed to retrieve details", e);
-        }
-    }
 
     @Override
     public HealtchCheckEntity update(HealthCheckDTO healthCheckDTO) {
