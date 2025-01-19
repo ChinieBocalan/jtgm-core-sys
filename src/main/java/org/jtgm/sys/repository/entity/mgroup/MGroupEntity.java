@@ -19,23 +19,23 @@ public class MGroupEntity {
     private Long id;
 
     @Column(name = "NAME")
-    private String NAME;
+    private String mgroupName;
 
     @Column(name = "DESCRIPTION")
-    private String DESCRIPTION;
+    private String mgroupDesc;
 
     @Column(name = "CATEGORY")
-    private String CATEGORY;
+    private String mgroupCateg;
 
     @Column(name = "LOCATION")
-    private String LOCATION;
+    private String mgroupLoc;
 
     @Column(name = "LEADER")
-    private Integer LEADER;
+    private Integer mgroupLead;
 
     @Column(name="CREATED_DATE")
-    private LocalDateTime CREATED_DATE;
+    private LocalDateTime mgroupCreate;
 
     @Column(name="UPDATED_DATE")
-    private LocalDateTime UPDATED_DATE;
+    private LocalDateTime mgroupUpdate;
 }
