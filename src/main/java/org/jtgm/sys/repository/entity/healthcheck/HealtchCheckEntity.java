@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Table(name="HEALTHCHECKTBL")
+@Table(name="HEALTHCHECK")
 @NoArgsConstructor
 public class HealtchCheckEntity {
 
