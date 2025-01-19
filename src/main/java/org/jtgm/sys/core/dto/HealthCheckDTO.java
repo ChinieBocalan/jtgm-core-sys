@@ -1,9 +1,6 @@
 package org.jtgm.sys.core.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -11,10 +8,12 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class HealthCheckDTO {
     private Long id;
     private boolean isActive;
     private String sysName;
+    private String sysDesc;
     private String version;
     private LocalDateTime date;
 }
