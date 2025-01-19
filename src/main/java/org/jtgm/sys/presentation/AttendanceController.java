@@ -14,13 +14,6 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class AttendanceController {
 
-
-
-
-
-
-
-
     @PostMapping(path="/update", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AttendanceDTO> updateSystemHealth(@RequestBody AttendanceDTO attendanceDTO) {
         try {
