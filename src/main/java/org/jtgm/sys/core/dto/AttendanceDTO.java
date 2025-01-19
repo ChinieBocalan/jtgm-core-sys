@@ -12,13 +12,13 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class AttendanceDTO {
     private Long id;
-    private String LASTNAME;
-    private String FIRSTNAME;
-    private LocalDate BIRTHDATE;
-    private String ADDRESS;
-    private String MUNICIPALITY;
-    private String BARANGAY;
-    private LocalDate DATE_JOINED;
-    private LocalDate CREATED_DATE;
-    private LocalDate UPDATED_DATE;
+    private String lastName;
+    private String firstName;
+    private LocalDate birthDate;
+    private String address;
+    private String municipality;
+    private String barangay;
+    private LocalDate dateJoined;
+    private LocalDate createdDate;
+    private LocalDate updatedDate;
 }
