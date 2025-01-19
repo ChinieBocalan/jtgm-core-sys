@@ -3,7 +3,6 @@ package org.jtgm.sys.presentation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jtgm.sys.core.dto.AttendanceDTO;
-import org.jtgm.sys.core.dto.HealthCheckDTO;
 import org.jtgm.sys.core.exception.GenericServiceErrorException;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
