@@ -3,12 +3,12 @@ package org.jtgm.sys.repository.impl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jtgm.sys.core.dto.UserDTO;
+import org.jtgm.sys.repository.HealthCheckRepository;
+import org.jtgm.sys.repository.UserRepository;
 import org.jtgm.sys.repository.entity.user.UserEntity;
 import org.jtgm.sys.repository.jpa.UserJpa;
-import org.jtgm.sys.repository.jpa.UserRepository;
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Repository
