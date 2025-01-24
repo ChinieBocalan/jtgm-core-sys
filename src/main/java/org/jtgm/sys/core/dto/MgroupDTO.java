@@ -3,8 +3,10 @@ package org.jtgm.sys.core.dto;
 import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.Date;
-
+@Builder
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class MgroupDTO {
     private Long id;
     private String mgroupName;
@@ -12,6 +14,6 @@ public class MgroupDTO {
     private String mgroupCateg;
     private String mgroupLoc;
     private Long mgroupLead;
-    private Date mgroupCreate;
+    private LocalDateTime mgroupCreate;
     private LocalDateTime mgroupUpdate;
 }

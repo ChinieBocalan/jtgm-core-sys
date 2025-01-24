@@ -31,7 +31,7 @@ public class MGroupEntity {
     private String mgroupLoc;
 
     @Column(name = "LEADER")
-    private Integer mgroupLead;
+    private Long mgroupLead;
 
     @Column(name="CREATED_DATE")
     private LocalDateTime mgroupCreate;

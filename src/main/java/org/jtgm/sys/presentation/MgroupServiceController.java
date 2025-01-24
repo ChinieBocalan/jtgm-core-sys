@@ -17,29 +17,16 @@ public class MgroupServiceController {
     final private MgroupService MgroupService;
 
     @GetMapping(path="", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<MgroupDTO> checkSystemHealth() {
+    public ResponseEntity<MgroupDTO> checkMGroup() {
         try {
             log.info("[INFO] Health Check Getting Started");
-            MgroupDTO mgroupDTO = MgroupService.getMgroupDetails();
+            MgroupDTO mgroupDTO = MgroupService.getMGroupDetails();
             log.info("[END] Successfully hit the endpoint.");
             return ResponseEntity.ok(mgroupDTO);
         } catch (Exception e){
             throw new GenericServiceErrorException("Failed to reach the database", e);
         }
     }
-
-    @PostMapping(path="/update", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<MgroupDTO> updateSystemHealth(@RequestBody MgroupDTO mgroupDTO) {
-        try {
-            log.info("[INFO] Health Check Update Started");
-            MgroupService.update(mgroupDTO);
-            log.info("[END] Successfully updated the health check details.");
-            return ResponseEntity.ok(mgroupDTO);
-        } catch (Exception e){
-            throw new GenericServiceErrorException("Failed to reach the database", e);
-        }
-    }
-
 }
 
 
