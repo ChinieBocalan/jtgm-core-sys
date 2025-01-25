@@ -28,4 +28,39 @@ public class AttendanceController {
             throw new GenericServiceErrorException("Failed to reach the database", e);
         }
     }
+    @PostMapping(path="/update", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<AttendanceDTO> updateAttendance(@RequestBody AttendanceDTO attendanceDTO) {
+        try {
+            log.info("[INFO] Attendance Update Started");
+            attendanceService.update(attendanceDTO);
+            log.info("[END] Successfully updated the attendance details.");
+            return ResponseEntity.ok(attendanceDTO);
+        } catch (Exception e){
+            throw new GenericServiceErrorException("Failed to reach the database", e);
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+    }
+
+    public AttendanceService getAttendanceService() {
+        return attendanceService;
+    }
 }

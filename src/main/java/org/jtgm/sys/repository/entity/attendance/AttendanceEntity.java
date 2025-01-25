@@ -26,7 +26,7 @@ public class AttendanceEntity {
     private String firstname;
 
     @Column(name="BIRTHDATE")
-    private LocalDate date;
+    private LocalDate birthdate;
 
     @Column(name="ADDRESS")
     private String address;
