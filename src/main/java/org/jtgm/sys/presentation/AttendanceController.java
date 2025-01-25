@@ -6,25 +6,25 @@ import org.jtgm.sys.core.dto.AttendanceDTO;
 import org.jtgm.sys.core.dto.HealthCheckDTO;
 import org.jtgm.sys.core.exception.GenericServiceErrorException;
 import org.jtgm.sys.core.service.AttendanceService;
-import org.jtgm.sys.core.service.HealthCheckService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/jtgm/health-check")
+@RequestMapping("/jtgm/attendance")
 @Slf4j
 @RequiredArgsConstructor
 public class AttendanceController {
+    final private AttendanceService attendanceService;
 
-    @PostMapping(path="/update", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<AttendanceDTO> updateSystemHealth(@RequestBody AttendanceDTO attendanceDTO) {
+    @GetMapping(path="", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<AttendanceDTO> checkSystemHealth() {
         try {
-            log.info("[INFO] Attendee Update Started");
-            attendanceService.update(attendanceDTO);
-            log.info("[END] Successfully updated the health check details.");
-            return ResponseEntity.ok(attendanceDTO);
-        } catch (Exception e){
+            log.info("[INFO] Attendance Getting Started");
+            AttendanceDTO AttendanceDTO = attendanceService.getAttendanceDetails();
+            log.info("[END] Successfully hit the endpoint.");
+            return ResponseEntity.ok(new AttendanceDTO());
+        } catch (Exception e) {
             throw new GenericServiceErrorException("Failed to reach the database", e);
         }
     }
