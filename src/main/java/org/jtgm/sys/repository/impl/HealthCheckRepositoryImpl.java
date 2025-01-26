@@ -56,4 +56,9 @@ public class HealthCheckRepositoryImpl implements HealthCheckRepository {
 
         return healthCheckJpa.save(healtchCheckEntity);
     }
+
+    @Override
+    public void delete(int id) {
+
+    }
 }
