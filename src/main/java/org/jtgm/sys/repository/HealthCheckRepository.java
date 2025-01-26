@@ -6,4 +6,5 @@ import org.jtgm.sys.repository.entity.healthcheck.HealtchCheckEntity;
 public interface HealthCheckRepository {
     HealtchCheckEntity getHealthCheckDetails();
     HealtchCheckEntity update(HealthCheckDTO healthCheckDTO);
+    void delete(int id);
 }

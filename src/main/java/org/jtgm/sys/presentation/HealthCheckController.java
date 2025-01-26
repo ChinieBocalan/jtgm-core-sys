@@ -40,4 +40,16 @@ public class HealthCheckController {
         }
     }
 
+    @DeleteMapping(path="/delete/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> delete(@PathVariable("id") int id) {
+        try {
+            log.info("[INFO] Health Check Delete Started");
+            healthCheckService.delete(id);
+            log.info("[END] Successfully deleted the health check details.");
+            return ResponseEntity.ok("HealtCheck Details successfully deleted");
+        } catch (Exception e){
+            throw new GenericServiceErrorException("Failed to reach the database", e);
+        }
+    }
+
 }
