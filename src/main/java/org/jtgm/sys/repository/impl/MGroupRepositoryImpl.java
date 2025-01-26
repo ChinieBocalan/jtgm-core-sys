@@ -37,11 +37,6 @@ public class MGroupRepositoryImpl implements MGroupRepository {
     }
 
     @Override
-    public HealtchCheckEntity update(HealthCheckDTO healthCheckDTO) {
-        return null;
-    }
-
-    @Override
     public MGroupEntity update(MGroupDTO mGroupDTO) {
         new MGroupEntity();
         MGroupEntity mGroupEntity = MGroupEntity.builder()
@@ -78,3 +73,5 @@ public class MGroupRepositoryImpl implements MGroupRepository {
 
     }
 }
+
+    }
