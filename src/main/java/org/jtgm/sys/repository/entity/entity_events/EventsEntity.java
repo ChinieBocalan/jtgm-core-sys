@@ -1,8 +1,7 @@
-package org.jtgm.sys.repository.entity_events;
+package org.jtgm.sys.repository.entity.entity_events;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.time.LocalDateTime;
 
 @Getter
@@ -12,29 +11,27 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 @AllArgsConstructor
-
 public class EventsEntity {
-
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "NAME")
-    private String sysName;
+    private String NAME;
 
     @Column(name = "DESCRIPTION")
-    private String sysDesc;
+    private String DESCRIPTION;
 
     @Column(name="ACTUAL_DATE")
-    private LocalDateTime actualDate;
+    private LocalDateTime ACTUAL_DATE;
 
     @Column(name="PROPOSAL_DATE")
-    private LocalDateTime proposalDate;
+    private LocalDateTime PROPOSAL_DATE;
 
     @Column(name="CREATED_DATE")
-    private LocalDateTime createdDate;
+    private LocalDateTime CREATED_DATE;
 
     @Column(name="UPDATED_DATE")
-    private LocalDateTime updateDate;
+    private LocalDateTime UPDATED_DATE;
 
 }

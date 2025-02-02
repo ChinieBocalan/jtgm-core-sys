@@ -24,9 +24,9 @@ public class EventsController {
     public ResponseEntity<List<EventsDTO>> getAllEvents() {
         try {
             log.info("[INFO] Events Getting Started");
-            List<EventsDTO> EventsDTO = eventsService.getEventsDetails();
+            List<EventsDTO> eventsDTO = eventsService.getEventsDetails();
             log.info("[END] Successfully hit the endpoint.");
-            return ResponseEntity.ok(EventsDTO);
+            return ResponseEntity.ok(eventsDTO);
         } catch (Exception e){
             throw new GenericServiceErrorException("Failed to reach the database", e);
         }
