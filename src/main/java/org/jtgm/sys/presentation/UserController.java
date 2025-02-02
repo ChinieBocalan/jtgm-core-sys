@@ -22,7 +22,7 @@ public class UserController {
     @PostMapping(path="/update", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<UserDTO> updateSystemUser(@RequestBody UserDTO userDTO) {
         try {
-            log.info("[INFO] User Update Started");
+            log.info("[INFO] User create/update has been started");
             UserDTO userDTOResponse = userService.update(userDTO);
             log.info("[END] Successfully updated the user details.");
             return ResponseEntity.ok(userDTOResponse);
