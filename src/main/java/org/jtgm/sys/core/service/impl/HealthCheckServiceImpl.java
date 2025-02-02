@@ -21,7 +21,7 @@ public class HealthCheckServiceImpl implements HealthCheckService {
     private final HealthCheckJpa healthCheckJpa;
 
     @Override
-    public HealthCheckDTO getHealtCheckDetails() {
+    public HealthCheckDTO getHealthCheckDetails() {
         HealtchCheckEntity healtchCheck = healthCheckRepository.getHealthCheckDetails();
         return builderHealthCheckDTO(healtchCheck);
     }
