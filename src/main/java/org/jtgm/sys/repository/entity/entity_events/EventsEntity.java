@@ -17,21 +17,21 @@ public class EventsEntity {
     private Long id;
 
     @Column(name = "NAME")
-    private String NAME;
+    private String name;
 
     @Column(name = "DESCRIPTION")
-    private String DESCRIPTION;
+    private String description;
 
     @Column(name="ACTUAL_DATE")
-    private LocalDateTime ACTUAL_DATE;
+    private LocalDateTime actualDate;
 
     @Column(name="PROPOSAL_DATE")
-    private LocalDateTime PROPOSAL_DATE;
+    private LocalDateTime proposalDate;
 
     @Column(name="CREATED_DATE")
-    private LocalDateTime CREATED_DATE;
+    private LocalDateTime createdDate;
 
     @Column(name="UPDATED_DATE")
-    private LocalDateTime UPDATED_DATE;
+    private LocalDateTime updateDate;
 
 }

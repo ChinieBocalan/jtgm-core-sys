@@ -22,12 +22,12 @@ public class EventsServiceImpl implements EventsService {
                  .stream()
                  .map(f -> EventsDTO.builder()
                          .id(f.getId())
-                         .NAME(f.getNAME())
-                         .DESCRIPTION(f.getDESCRIPTION())
-                         .ACTUAL_DATE(f.getACTUAL_DATE())
-                         .PROPOSAL_DATE(f.getPROPOSAL_DATE())
-                         .CREATED_DATE(f.getCREATED_DATE())
-                         .UPDATED_DATE(f.getUPDATED_DATE())
+                         .name(f.getName())
+                         .description(f.getDescription())
+                         .actualDate(f.getActualDate())
+                         .proposalDate(f.getProposalDate())
+                         .createdDate(f.getCreatedDate())
+                         .updateDate(f.getUpdateDate())
                          .build()).toList();
     }
 

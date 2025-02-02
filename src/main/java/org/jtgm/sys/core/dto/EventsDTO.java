@@ -10,10 +10,10 @@ import lombok.*;
 @NoArgsConstructor
 public class EventsDTO {
     private Long id;
-    private String NAME;
-    private String DESCRIPTION;
-    private LocalDateTime ACTUAL_DATE;
-    private LocalDateTime PROPOSAL_DATE;
-    private LocalDateTime CREATED_DATE;
-    private LocalDateTime UPDATED_DATE;
+    private String name;
+    private String description;
+    private LocalDateTime actualDate;
+    private LocalDateTime proposalDate;
+    private LocalDateTime createdDate;
+    private LocalDateTime updateDate;
 }
