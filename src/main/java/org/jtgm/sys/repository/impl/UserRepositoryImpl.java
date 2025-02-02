@@ -4,9 +4,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jtgm.sys.core.dto.UserDTO;
 import org.jtgm.sys.repository.UserRepository;
-import org.jtgm.sys.repository.entity.healthcheck.UserEntity;
+import org.jtgm.sys.repository.entity.user.UserEntity;
 import org.jtgm.sys.repository.exception.GenericRepositoryErrorException;
-import org.jtgm.sys.repository.jpa.UserJPA;
+import org.jtgm.sys.repository.jpa.UserJpa;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
@@ -16,17 +16,17 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 public class UserRepositoryImpl implements UserRepository {
-    final private UserJPA userJpa;
+    final private UserJpa userJpa;
 
     @Override
-    public UserEntity update (UserDTO userDTO) {
+    public UserEntity update(UserDTO userDTO) {
         UserEntity userEntity = new UserEntity().builder()
-        .id(userDTO.getId())
-        .username(userDTO.getUsername())
-        .password(userDTO.getPassword())
-        .createdDate(LocalDateTime.now())
-        .updatedDate(LocalDateTime.now())
-        .build();
+                .id(userDTO.getId())
+                .username(userDTO.getUsername())
+                .password(userDTO.getPassword())
+                .createdDate(LocalDateTime.now())
+                .updatedDate(LocalDateTime.now())
+                .build();
 
         return userJpa.save(userEntity);
     }
@@ -38,7 +38,8 @@ public class UserRepositoryImpl implements UserRepository {
             List<UserEntity> userEntity = userJpa.findAll();
             log.info("[INFO] Retrieving details from database");
             return userEntity;
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new GenericRepositoryErrorException("[ERROR] Failed to retrieve details", e);
         }
+    }
 }

@@ -2,7 +2,6 @@ package org.jtgm.sys.presentation;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.jtgm.sys.core.dto.HealthCheckDTO;
 import org.jtgm.sys.core.dto.UserDTO;
 import org.jtgm.sys.core.exception.GenericServiceErrorException;
 import org.jtgm.sys.core.service.UserService;
@@ -34,7 +33,7 @@ public class UserController {
     @GetMapping(path="", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<UserDTO>> fetchUser() {
         try {
-            log.info("[INFO] Health Check Getting Started");
+            log.info("[INFO] Fetch Users");
             List<UserDTO> userDTOList = userService.getUserDetails();
             log.info("[END] Successfully hit the endpoint.");
             return ResponseEntity.ok(userDTOList);
