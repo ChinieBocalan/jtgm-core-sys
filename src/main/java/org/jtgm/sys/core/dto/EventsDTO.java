@@ -1,7 +1,6 @@
 package org.jtgm.sys.core.dto;
 
 import lombok.*;
-
 import java.time.LocalDateTime;
 
 @Builder

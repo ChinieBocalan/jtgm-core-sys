@@ -1,14 +1,11 @@
 package org.jtgm.sys.core.service.impl;
-
 import lombok.RequiredArgsConstructor;
 import org.jtgm.sys.core.dto.EventsDTO;
 import org.jtgm.sys.core.service.EventsService;
 import org.jtgm.sys.repository.EventsRepository;
 import org.jtgm.sys.repository.entity.events.EventsEntity;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
-import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
