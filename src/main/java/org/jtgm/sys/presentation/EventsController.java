@@ -21,9 +21,9 @@ public class EventsController {
     final private EventsService eventsService;
 
     @GetMapping(path="", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<EventsDTO>> checkSystemHealth() {
+    public ResponseEntity<List<EventsDTO>> getAllEvents() {
         try {
-            log.info("[INFO] Health Check Getting Started");
+            log.info("[INFO] Events Getting Started");
             List<EventsDTO> EventsDTO = eventsService.getEventsDetails();
             log.info("[END] Successfully hit the endpoint.");
             return ResponseEntity.ok(EventsDTO);
