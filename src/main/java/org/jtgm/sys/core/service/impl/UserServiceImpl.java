@@ -5,16 +5,17 @@ import org.jtgm.sys.core.dto.UserDTO;
 import org.jtgm.sys.core.service.UserService;
 import org.jtgm.sys.repository.UserRepository;
 import org.jtgm.sys.repository.entity.user.UserEntity;
-import org.jtgm.sys.repository.jpa.UserJPA;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
+
     final private UserRepository userRepository;
-    
+
     @Override
     public UserDTO update (UserDTO userDTO) {
         UserEntity userProcessed = userRepository.update(userDTO);
@@ -32,4 +33,19 @@ public class UserServiceImpl implements UserService {
 
     }
 
+    @Override
+    public List<UserDTO> getUserDetails() {
+        List<UserEntity> userEntityList = userRepository.getUserDetails();
+        List<UserDTO> userDTOList= userEntityList
+                .stream()
+                .map(f -> UserDTO.builder()
+                        .id(f.getId())
+                        .username(f.getUsername())
+                        .password(f.getPassword())
+                        .createdDate(f.getCreatedDate())
+                        .updatedDate(f.getUpdatedDate())
+                        .build()).toList();
+
+        return userDTOList;
+    }
 }
