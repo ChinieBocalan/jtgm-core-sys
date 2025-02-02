@@ -23,9 +23,9 @@ public class UserController {
     public ResponseEntity<UserDTO> updateSystemUser(@RequestBody UserDTO userDTO) {
         try {
             log.info("[INFO] User Update Started");
-            UserDTO userDTO1 = userService.update(userDTO);
+            UserDTO userDTOResponse = userService.update(userDTO);
             log.info("[END] Successfully updated the user details.");
-            return ResponseEntity.ok(userDTO1);
+            return ResponseEntity.ok(userDTOResponse);
         } catch (Exception e){
             throw new GenericServiceErrorException("Failed to reach the database", e);
         }
