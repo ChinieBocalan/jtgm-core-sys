@@ -20,7 +20,7 @@ public class HealthCheckController {
     public ResponseEntity<HealthCheckDTO> checkSystemHealth() {
         try {
             log.info("[INFO] Health Check Getting Started");
-            HealthCheckDTO healthCheckDTO = healthCheckService.getHealtCheckDetails();
+            HealthCheckDTO healthCheckDTO = healthCheckService.getHealthCheckDetails();
             log.info("[END] Successfully hit the endpoint.");
             return ResponseEntity.ok(healthCheckDTO);
         } catch (Exception e){
