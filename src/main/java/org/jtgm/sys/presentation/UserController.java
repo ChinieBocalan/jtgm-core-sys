@@ -5,7 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.jtgm.sys.core.dto.HealthCheckDTO;
 import org.jtgm.sys.core.dto.UserDTO;
 import org.jtgm.sys.core.exception.GenericServiceErrorException;
-import org.jtgm.sys.core.service.HealthCheckService;
 import org.jtgm.sys.core.service.UserService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +19,18 @@ import java.util.List;
 public class UserController {
     final private UserService userService;
 
+    @PostMapping(path="/update", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<UserDTO> updateSystemUser(@RequestBody UserDTO userDTO) {
+        try {
+            log.info("[INFO] User create/update has been started");
+            UserDTO userDTOResponse = userService.update(userDTO);
+            log.info("[END] Successfully updated the user details.");
+            return ResponseEntity.ok(userDTOResponse);
+        } catch (Exception e){
+            throw new GenericServiceErrorException("Failed to reach the database", e);
+        }
+    }
+
     @GetMapping(path="", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<UserDTO>> fetchUser() {
         try {
@@ -31,5 +42,4 @@ public class UserController {
             throw new GenericServiceErrorException("Failed to reach the database", e);
         }
     }
-
 }

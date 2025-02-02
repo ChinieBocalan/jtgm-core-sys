@@ -11,8 +11,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class UserDTO {
     private Long id;
-    private String userName;
-    private String passWord;
+    private String username;
+    private String password;
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
 }
